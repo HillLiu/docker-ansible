@@ -7,7 +7,6 @@ DIR="$(
 TERRATEST=$(${DIR}/../support/TERRATEST.sh)
 
 docker run --rm -v $DIR/../:/app/test \
-  -e BASE=$DIR/../ \
   -v /var/run/docker.sock:/var/run/docker.sock \
   -w /app/test \
   $TERRATEST \

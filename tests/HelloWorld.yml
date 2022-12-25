@@ -5,4 +5,4 @@
     - name: Create a file called 'testfile.txt' with the content 'hello world'.
       copy:
         content: hello worldn
-        dest: /app/testfile.txt
+        dest: /testfile.txt
