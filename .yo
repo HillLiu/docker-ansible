@@ -1,0 +1,4 @@
+repositoryName=docker-ansible
+repositoryOrgName=HillLiu
+dockerImageName=ansible
+dockerOrgName=hillliu
