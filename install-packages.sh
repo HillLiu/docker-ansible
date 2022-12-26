@@ -4,7 +4,7 @@
 # Environment ${INSTALL_VERSION} pass from Dockerfile
 ###
 
-INSTALL="ansible"
+INSTALL="ansible vim"
 
 BUILD_DEPS=""
 

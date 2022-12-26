@@ -11,6 +11,7 @@ RUN apk update && apk add bash bc \
   && rm /usr/local/bin/install-packages;
 
 WORKDIR /app
+ENV ANSIBLE_VAULT_EDITOR=vim
 
 COPY ./docker/entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
