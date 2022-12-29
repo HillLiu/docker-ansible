@@ -17,8 +17,6 @@ func TestPlaybook(t *testing.T) {
 	}
 	docker.Build(t, "../", buildOptions)
 
-	fmt.Println(tag + ":/app/HelloWorld.yml")
-
 	cmd := `
 	  echo "";
 	  echo "------------";
@@ -35,12 +33,14 @@ func TestPlaybook(t *testing.T) {
 		t.Fatal(err)
 	}
 
-	// website::tag::3:: Run the Docker image.
+	dockerCmd := `
+	  ansible-playbook /HelloWorld.yml \
+		&& [ -e /tmp/testfile.txt ] && echo 'O.K.'
+	`
 	opts := &docker.RunOptions{
-		Command: []string{"sh", "-c", "ansible-playbook /HelloWorld.yml && [ -e /testfile.txt ] && echo 'O.K.'"},
+		Command: []string{"sh", "-c", dockerCmd},
 	}
 	output := docker.Run(t, tag, opts)
-	fmt.Println(output)
 	assert.Contains(t, output, "Create a file called 'testfile.txt'")
 	assert.Contains(t, output, "O.K.")
 }
