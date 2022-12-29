@@ -24,7 +24,10 @@ echo ""
 apk add --virtual .build-deps $BUILD_DEPS && apk add $INSTALL
 
 #/* put your install code here */#
-mkdir /app && chmod 0777 /app
+groupadd --gid 1000 ansible && \
+    useradd --home-dir /ansible --shell /bin/bash --uid 1000 --gid 1000 ansible && \
+    mkdir -p /ansible
+chmod 0777 /ansible
 
 apk del -f .build-deps && rm -rf /var/cache/apk/* || exit 1
 
