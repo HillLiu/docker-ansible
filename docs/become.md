@@ -19,3 +19,7 @@ Change to different use, if not specific user will use root
     name: mypackage
     state: latest
 ```
+
+## Remote user
+
+[playbooks_intro.html](https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_intro.html#about-playbooks)

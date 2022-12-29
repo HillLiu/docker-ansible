@@ -24,6 +24,7 @@ echo ""
 apk add --virtual .build-deps $BUILD_DEPS && apk add $INSTALL
 
 #/* put your install code here */#
+mkdir /app && chmod 0777 /app
 
 apk del -f .build-deps && rm -rf /var/cache/apk/* || exit 1
 
