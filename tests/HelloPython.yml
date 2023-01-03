@@ -1,0 +1,13 @@
+- hosts: localhost
+  connection: local
+  vars:
+    ansible_python_interpreter: "/usr/bin/python3"
+  tasks:
+    - name: Get current time
+      time:
+        name: 'test'
+        new: true
+      register: testout
+    - name: Print current time
+      debug:
+        var: testout

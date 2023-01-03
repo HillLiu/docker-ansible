@@ -28,7 +28,8 @@ mkdir -p /etc/ansible
 echo 'localhost' > /etc/ansible/hosts
 adduser -h /ansible -s /bin/bash -D ansible ansible && \
     mkdir -p /ansible
-chmod 0777 /ansible
+mkdir -p /ansible/.ansible/plugins/modules
+chown ansible:ansible -R /ansible
 
 apk del -f .build-deps && rm -rf /var/cache/apk/* || exit 1
 
