@@ -13,5 +13,5 @@ ansible-vault create --vault-id=my_vault_id@/path/to/my_vault_password_file.txt 
 `  
 ## With docker
 ```
-docker run --rm -v $(pwd):/app hillliu/ansible ansible-vault encrypt --vault-id=./xxx.key ./xxx.yaml 
+docker run --rm -u $(id -u):$(id -g) -it -v $(pwd):/app hillliu/ansible ansible-vault encrypt --vault-id=./xxx.key ./xxx.yaml 
 ```
