@@ -4,7 +4,7 @@
 # Environment ${INSTALL_VERSION} pass from Dockerfile
 ###
 
-INSTALL="ansible vim"
+INSTALL="ansible py3-pip vim"
 
 BUILD_DEPS=""
 
@@ -26,9 +26,13 @@ apk add --virtual .build-deps $BUILD_DEPS && apk add $INSTALL
 #/* put your install code here */#
 mkdir -p /etc/ansible
 echo 'localhost' > /etc/ansible/hosts
-adduser -h /ansible -s /bin/bash -D ansible ansible && \
-    mkdir -p /ansible
+adduser -h /ansible -s /bin/bash -D ansible ansible \
+  && mkdir -p /ansible
 mkdir -p /ansible/.ansible/plugins/modules
+pip3 install \
+  molecule \
+  'molecule[docker]'
+pip3 install requests -U
 chown ansible:ansible -R /ansible
 
 apk del -f .build-deps && rm -rf /var/cache/apk/* || exit 1

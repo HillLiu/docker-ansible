@@ -18,3 +18,6 @@ include_vars module – Load variables from files, dynamically within a task
 ```
 
 ## use include_vars to import secrect
+
+## more docs
+* [Remote environment](https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_environment.html)
