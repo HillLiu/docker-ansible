@@ -8,10 +8,11 @@ ARG VERSION
 COPY ./install-packages.sh /usr/local/bin/install-packages
 RUN apk update && apk add bash bc \
   && INSTALL_VERSION=$VERSION install-packages \
-  && rm /usr/local/bin/install-packages;
+  && rm /usr/local/bin/install-packages
 
 WORKDIR /app
 ENV ANSIBLE_VAULT_EDITOR=vim \
+  EDITOR=vim \
   HOME=/ansible
 
 USER ansible
