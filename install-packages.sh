@@ -26,6 +26,7 @@ apk add --virtual .build-deps $BUILD_DEPS && apk add $INSTALL
 #/* put your install code here */#
 mkdir -p /etc/ansible
 echo 'localhost' > /etc/ansible/hosts
+adduser -u 501 -D mac-temp-user
 adduser -h /ansible -s /bin/bash -D ansible ansible \
   && mkdir -p /ansible
 mkdir -p /ansible/.ansible/plugins/modules
