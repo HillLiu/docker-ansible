@@ -4,7 +4,7 @@
 # Environment ${INSTALL_VERSION} pass from Dockerfile
 ###
 
-INSTALL="ansible py3-pip vim openssh git"
+INSTALL="ansible py3-pip vim openssh-client git"
 
 BUILD_DEPS=""
 
@@ -36,6 +36,7 @@ pip3 install \
 pip3 install requests -U
 chown ansible:ansible -R /ansible
 chmod 0777 -R /ansible
+chmod 0777 -R /usr/local
 
 apk del -f .build-deps && rm -rf /var/cache/apk/* || exit 1
 
