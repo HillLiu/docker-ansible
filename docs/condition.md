@@ -6,7 +6,7 @@
 
 # Text search
 * [find](https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_conditionals.html#conditions-based-on-registered-variables)
-
+* [search](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/search_test.html)
 
 ## Defining failure
 * [failed_when](https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_error_handling.html)
