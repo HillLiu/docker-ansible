@@ -30,10 +30,10 @@ adduser -u 501 -D mac-temp-user
 adduser -h /ansible -s /bin/bash -D ansible ansible \
   && mkdir -p /ansible
 mkdir -p /ansible/.ansible/plugins/modules
-pip3 install \
+pip3 install -U \
+  requests \
   molecule \
   'molecule[docker]'
-pip3 install requests -U
 chown ansible:ansible -R /ansible
 chmod 0777 -R /ansible
 chmod 0777 -R /usr/local

@@ -8,3 +8,4 @@
 - [Conditionals](./condition.md)
 - [Dry run](./dry-run.md)
 - [Speed up](./speed-up.md)
+- [Inventory](./inventory.md)

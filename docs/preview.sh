@@ -19,28 +19,28 @@ if [ -e "${ENV}" ]; then
   fi
 fi
 
+PORT=${PORT:-3888}
 MDBOOK_SRC=${MDBOOK_SRC:-$DIR}
 CONTAINER_NAME=${CONTAINER_NAME:-mdbook}
 
-OpenCmd=$(which xdg-open 2> /dev/null)
-case "$OSTYPE" in
-  linux*)
-    if [ -z "$OpenCmd" ]; then
-      OpenCmd="echo"
-    fi
-    ;;
-  darwin*)
-    OpenCmd="open"
-    ;;
-  *)
-    if [ -z "$OpenCmd" ]; then
-      OpenCmd="echo"
-    fi
-    ;;
-esac
+open() {
+  OpenCmd=$(which xdg-open 2> /dev/null)
+  case "$OSTYPE" in
+    linux*) ;;
+
+    darwin*)
+      OpenCmd="open"
+      ;;
+    *) ;;
+
+  esac
+  if [ -z "$OpenCmd" ]; then
+    OpenCmd="echo"
+  fi
+  echo ${OpenCmd} http://localhost:${PORT} | sh
+}
 
 start() {
-  PORT=${PORT:-3888}
   # echo $MDBOOK_SRC
   # echo $CONTAINER_NAME
   # echo $PORT
@@ -54,7 +54,7 @@ start() {
   echo $cmd
   echo $cmd | sh
   sleep 5
-  echo ${OpenCmd} http://localhost:${PORT} | sh
+  open
   logs
 }
 
@@ -108,12 +108,15 @@ case "$1" in
   pull)
     pull
     ;;
+  open)
+    open
+    ;;
   *)
     binPath=$0
     if [ "$binPath" == "bash" ] || [ "$binPath" == "sh" ]; then
       binPath="curl https://raw.githubusercontent.com/HillLiu/docker-mdbook/main/bin/preview.sh | bash -s --"
     fi
-    echo "$binPath [start|stop|build|status|logs|pull]"
+    echo "$binPath [start|stop|build|status|logs|pull|open]"
     exit
     ;;
 esac
