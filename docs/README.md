@@ -4,6 +4,7 @@
 -   [Ansible Vault](./ansible-vault.md)
     -   [Vars](./vars.md)
 -   [Ansible Become](./become.md)
+    -   [delegate_to](./delegate-to.md)
 -   [Import / Include (Reuse)](./reuse.md)
 -   [Conditionals](./condition.md)
 -   [Dry run](./dry-run.md)
