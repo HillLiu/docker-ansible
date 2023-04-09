@@ -14,3 +14,5 @@
 # Ansible Util
 
 -   [Ip Tools](./ansible-util-ip.md)
+-   [CLI Tools](./cli.md)
+-   [File Tools](./file.md)
