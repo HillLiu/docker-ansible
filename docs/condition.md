@@ -10,3 +10,4 @@
 
 ## Defining failure
 * [failed_when](https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_error_handling.html)
+* [failure with message](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/fail_module.html#ansible-collections-ansible-builtin-fail-module)
