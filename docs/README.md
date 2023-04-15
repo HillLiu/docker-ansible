@@ -11,6 +11,10 @@
 -   [Speed up](./speed-up.md)
 -   [Inventory](./inventory.md)
 
+# Custom
+
+-   [Plugin](./plugin.md)
+
 # Ansible Util
 
 -   [Ip Tools](./ansible-util-ip.md)
