@@ -12,7 +12,6 @@
    * https://hub.docker.com/r/hillliu/ansible
 
 ## Usage
-
 ```
 
 ```
