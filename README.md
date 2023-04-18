@@ -3,7 +3,6 @@
 
 # `docker-ansible`
 
-> TODO: description 
 
 ## `GIT`
    * https://github.com/HillLiu/docker-ansible
