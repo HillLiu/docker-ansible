@@ -1,6 +1,6 @@
 ARG VERSION=${VERSION:-[VERSION]}
 
-FROM alpine:3.15
+FROM alpine:3.17
 
 ARG VERSION
 
@@ -17,6 +17,7 @@ ENV ANSIBLE_VAULT_EDITOR=vim \
 
 USER ansible
 
+COPY ./docker/ansible-ssh /usr/local/bin 
 COPY ./docker/entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
 CMD ["server"]
