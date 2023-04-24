@@ -31,6 +31,8 @@ adduser -h /ansible -s /bin/bash -D ansible ansible \
   && mkdir -p /ansible
 mkdir -p /ansible/.ansible/plugins/modules
 pip3 install -U \
+  pynetbox \
+  netaddr \
   requests \
   molecule \
   'molecule[docker]'
