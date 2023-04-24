@@ -4,7 +4,7 @@
 # Environment ${INSTALL_VERSION} pass from Dockerfile
 ###
 
-INSTALL="ansible py3-pip vim openssh-client git"
+INSTALL="ansible py3-pip vim openssh-client git less"
 
 BUILD_DEPS=""
 
