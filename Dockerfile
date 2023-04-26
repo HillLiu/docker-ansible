@@ -12,12 +12,9 @@ RUN apk update && apk add bash bc \
 
 WORKDIR /app
 ENV ANSIBLE_VAULT_EDITOR=vim \
-  EDITOR=vim \
-  HOME=/ansible
+  EDITOR=vim
 
-USER ansible
-
-COPY ./docker/ansible-ssh /usr/local/bin/
+COPY ./docker/ansible-ssh /usr/bin/
 COPY ./docker/entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
 CMD ["server"]
