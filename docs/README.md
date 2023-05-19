@@ -11,7 +11,7 @@
 -   [Speed up](./speed-up.md)
 -   [Inventory](./inventory.md)
 
-# Custom
+# Custom / Python
 
 -   [Plugin](./plugin.md)
 
