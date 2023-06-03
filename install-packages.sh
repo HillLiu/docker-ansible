@@ -31,6 +31,7 @@ echo 'localhost' > /etc/ansible/hosts
 adduser -u 501 -D mac-temp-user
 mkdir -p /root/.ansible/plugins/modules
 pip3 install -U \
+  docker \
   jmespath \
   pynetbox \
   netaddr \
