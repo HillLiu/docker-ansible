@@ -1,5 +1,8 @@
 # Vars
 
+## Discovering variables: facts and magic variables
+* <https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_vars_facts.html#package-requirements-for-fact-gathering>
+
 ## host var vs groups var
 * <https://www.rogerperkin.co.uk/network-automation/ansible/what-are-host_vars-and-group_vars-in-ansible/>
 * <https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_variables.html#understanding-variable-precedence> 
@@ -30,3 +33,6 @@
 
 ## include_vars_module
 * [include_vars_module](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/include_vars_module.html)
+
+## get python location
+* [Python](./python.md)

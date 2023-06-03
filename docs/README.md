@@ -14,6 +14,7 @@
 # Custom / Python
 
 -   [Plugin](./plugin.md)
+-   [Python](./python.md)
 
 # Ansible Util
 
