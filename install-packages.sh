@@ -25,10 +25,12 @@ apk add --virtual .build-deps $BUILD_DEPS && apk add $INSTALL
 
 #/* put your install code here */#
 
-
 mkdir -p /etc/ansible
 echo 'localhost' > /etc/ansible/hosts
 adduser -u 501 -D mac-temp-user
+addgroup mac-temp-user adm
+chown root:adm -R /usr/local/share || exit 4
+chmod 0775 /usr/local/share || exit 3
 mkdir -p /root/.ansible/plugins/modules
 pip3 install -U \
   docker \
@@ -37,7 +39,7 @@ pip3 install -U \
   netaddr \
   requests \
   molecule \
-  'molecule[docker]'
+  'molecule[docker]' || exit 2
 
 apk del -f .build-deps && rm -rf /var/cache/apk/* || exit 1
 

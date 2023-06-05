@@ -6,7 +6,7 @@ server() {
 }
 
 if [ -e "/key" ]; then
-  eval $(ssh-agent -a /usr/local/ssh-auth-sock)
+  eval $(ssh-agent -a /usr/local/share/ssh-auth-sock)
   ssh-add /key
 fi
 
