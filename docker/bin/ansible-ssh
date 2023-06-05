@@ -76,7 +76,7 @@ for line in ansible_config.splitlines():
     elif 'DEFAULT_PRIVATE_KEY_FILE' in line and not line.endswith('None'):
         ansible_ssh_default_keyfile = line.split(' = ')[1]
 ssh_args += [ansible_ssh_config_args]
-ssh_args += ['-o StrictHostKeychecking=no']
+ssh_args += ['-y -o StrictHostKeychecking=no']
 
 if 'ansible_ssh_common_args' in inv:
     ssh_args += [inv['ansible_ssh_common_args']]
