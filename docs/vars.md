@@ -1,6 +1,6 @@
 # Vars
 
-## Discovering variables: facts and magic variables
+## Discovering variables: facts and magic variables
 * <https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_vars_facts.html#package-requirements-for-fact-gathering>
 * <https://docs.ansible.com/ansible/latest/reference_appendices/special_variables.html>
 

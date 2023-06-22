@@ -3,6 +3,7 @@
 -   [Overview](./overview.md)
 -   [Ansible Vault](./ansible-vault.md)
     -   [Vars](./vars.md)
+    -   [Text](./text.md)
 -   [Ansible Become](./become.md)
     -   [delegate_to](./delegate-to.md)
 -   [Import / Include (Reuse)](./reuse.md)
