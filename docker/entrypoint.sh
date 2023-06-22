@@ -10,6 +10,11 @@ if [ -e "/key" ]; then
   ssh-add /key
 fi
 
+if [ -e "/sshconfig" ]; then
+  mkdir -p /root/.ssh/
+  cp /sshconfig /root/.ssh/config
+fi
+
 if [ "$1" = 'server' ]; then
   server
 else
