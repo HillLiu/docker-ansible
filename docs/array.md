@@ -1,8 +1,23 @@
-# delegate_to
+# Array Tip
 
-## set_fact
+## Get host data example
+```
+- name: Get host data
+  setup:
+    filter: ansible_hostname
+  register: hostData
+- debug: var=hostData
+```
 
-### set_fact to hostvar
+## Append to ansible array
+```
+- name: Append Array 
+   delegate_to: localhost
+   set_fact:
+     some_array: "{{ other_array | default([]) + [ one_item ] }}"
+```
+
+## set_fact to hostvar
 
 -   <https://berndonline.medium.com/how-to-delegate-ansible-host-variables-with-set-fact-6e7c937d0f4c>
 
@@ -14,7 +29,7 @@
    with_items: "{{ down }}"
 ```
 
-### set_fact to exists dict
+## set_fact to exists dict
 
 -   How to Append or Add items into Ansible Dictionary
 -   How to create List of Dictionaries in Ansible

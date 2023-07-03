@@ -5,9 +5,12 @@
 * <https://docs.ansible.com/ansible/latest/reference_appendices/special_variables.html>
 
 ### ansible_hostname vs inventory_hostname
-* ansible_hostname: the hostname from Gathering Facts
-* ansible_fqdn: the full hostname from Gathering Facts
 * inventory_hostname: hosname from inventory config
+   * ex: inventorykey-hostname
+* ansible_hostname: the hostname from Gathering Facts
+   * ex: realhostnam
+* ansible_fqdn: the full hostname from Gathering Facts
+   * ex: realhostnam.example.com
 
 ## host var vs groups var
 * <https://www.rogerperkin.co.uk/network-automation/ansible/what-are-host_vars-and-group_vars-in-ansible/>
