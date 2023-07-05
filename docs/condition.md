@@ -4,6 +4,11 @@
 * [Ansible Dry Run](https://docs.ansible.com/ansible/2.9/user_guide/playbooks_checkmode.html)
 * [Jinja](https://jinja.palletsprojects.com/en/3.1.x/templates/#comparisons)
 
+# Jinja if else
+```
+{% if %}{% else %}{% endif %}
+```
+
 # Text search
 * [find](https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_conditionals.html#conditions-based-on-registered-variables)
 * [search](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/search_test.html)
