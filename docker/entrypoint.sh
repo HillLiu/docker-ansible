@@ -12,12 +12,12 @@ if [ -e "/key" ]; then
   done
 fi
 
-# init /root/.ssh/config
-mkdir -p /root/.ssh/
+# init ~/.ssh/config
+mkdir -p ~/.ssh/
 for sshconfig in /sshconfig*; do
   if [ -f "$sshconfig" ]; then
-    cat $sshconfig >> /root/.ssh/config
-    echo "" >> /root/.ssh/config
+    cat $sshconfig >> ~/.ssh/config
+    echo "" >> ~/.ssh/config
   fi
 done
 
