@@ -3,6 +3,7 @@
 -   [Overview](./overview.md)
 -   [Ansible Vault](./ansible-vault.md)
     -   [Vars](./vars.md)
+        - [HostVars](./host_vars.md)
     -   [Text](./text.md)
     -   [Array Tip](./array.md)
 -   [Ansible Become](./become.md)

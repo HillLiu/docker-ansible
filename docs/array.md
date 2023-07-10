@@ -1,13 +1,5 @@
 # Array Tip
 
-## Get host data example
-```
-- name: Get host data
-  setup:
-    filter: ansible_hostname
-  register: hostData
-- debug: var=hostData
-```
 
 ## Append to ansible array
 ```
