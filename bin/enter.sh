@@ -21,6 +21,7 @@ echo $containerName
 
 cli='env docker run --rm -it'
 cli+=" -v $DIR/../docker/entrypoint.sh:/entrypoint.sh"
+cli+=" -v $DIR/../docker/bin/ansible-ssh:/usr/bin/ansible-ssh"
 cli+=" -v $MY_PWD:$MY_PWD"
 cli+=" -w $MY_PWD"
 cli+=" --name ${containerName} ${localImage}"
