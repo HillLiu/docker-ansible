@@ -10,15 +10,15 @@ class AppendToItemList(Action):
     def __call__(self, parser, namespace, values, option_string=None):
         if not hasattr(namespace, self.dest):
             setattr(namespace, self.dest, [])
-        getattr(namespace, self.dest).extend(values)
+        getattr(namespace, self.dest).extend([values])
 
 parser = ArgumentParser()
-parser.add_argument("--inventory", '-i', nargs='*', default=[], action=AppendToItemList, help='ansible inventory file to use instead of the one defined in ansible.cfg')
+parser.add_argument("--inventory", '-i', default=[], action=AppendToItemList, help='ansible inventory file to use instead of the one defined in ansible.cfg')
 parser.add_argument("--key-file", '-k', dest="keyfile", help='ssh private key file to use instead of the default for the user')
 parser.add_argument("--user", '-u', '-l', dest="user", help='override the user defined in ansible inventory file')
 parser.add_argument("--verbose", '-v', action="store_true", dest="verbose", default=False,help='pass verbose flag to ssh command')
 parser.add_argument("--become", '-b', action="store_true", dest="become", default=False,help='ssh as root instead of the inventory-supplied account')
-parser.add_argument("host",nargs='?', help='the host to ssh into, if not provided a list of available hosts in current inventory file is printed')
+parser.add_argument("host", nargs='?', help='the host to ssh into, if not provided a list of available hosts in current inventory file is printed')
 args = parser.parse_args()
 
 clean_inventory = ansible_ssh_config_args = ssh_user = ''
