@@ -4,6 +4,9 @@
 
 ```
 docker run --rm -u $(id -u):$(id -g) -it -v $(pwd):/app hillliu/ansible ansible-playbook --version
+
+ansible-galaxy collection list
+ansible --version
 ```
 
 ## Explore more Doc from command
