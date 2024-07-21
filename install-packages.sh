@@ -42,7 +42,7 @@ pip3 install -U \
   'molecule[docker]' || exit 2
 
 # Install new ansible module
-ansible-galaxy collection install community.docker
+ansible-galaxy collection install community.docker --force
 
 apk del -f .build-deps && rm -rf /var/cache/apk/* || exit 1
 
