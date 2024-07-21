@@ -13,6 +13,9 @@
 -   [Speed up](./speed-up.md)
 -   [Inventory](./inventory.md)
 
+# Module
+-   [APT](./apt.md)
+
 # Custom / Python
 
 -   [Plugin](./plugin.md)
