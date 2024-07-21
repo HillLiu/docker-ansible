@@ -13,5 +13,5 @@
 ## Usage
 
 ```
-
+   * docker pull allfunc/ansible
 ```
