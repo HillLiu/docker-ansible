@@ -14,7 +14,7 @@ WORKDIR /app
 ENV ANSIBLE_VAULT_EDITOR=vim \
   EDITOR=vim
 
-COPY ./docker/bin/ /usr/bin/
+COPY ./docker/bin/ /usr/local/bin/
 COPY ./docker/entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
 CMD ["server"]
